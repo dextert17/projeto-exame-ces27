@@ -2,6 +2,7 @@
 /* Variáveis */
 
 $orange: #F29100;
+$dark-orange: #CC7A00;
 $blue: #002F63;
 
 $font-stack: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
@@ -109,6 +110,29 @@ body {
 	br {
    	display: block;
    	margin: 5px 0;
+	}
+
+	button {
+		display: inline-block;
+  	padding: 8px 13px;
+  	cursor: pointer;
+  	text-align: center;
+  	text-decoration: none;
+  	outline: none;
+  	color: #fff;
+  	font-weight: bold;
+  	background-color: $orange;
+  	border: none;
+  	border-radius: 7px;
+  	box-shadow: 0 4px #999;
+
+  	&:hover {background-color: $dark-orange}
+
+		&:active {
+  		background-color: $dark-orange;
+  		box-shadow: 0 2px #666;
+  		transform: translateY(3px);
+		}
 	}
 
 	/* classes e IDs de text */
