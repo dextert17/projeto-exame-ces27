@@ -1,0 +1,101 @@
+@charset "UTF-8";
+/* Vari├íveis */
+/* Classes e IDs pr├®vios */
+* {
+  box-sizing: border-box; }
+
+.all_display, body, body section, body article, body footer {
+  width: 100%;
+  margin: 0; }
+
+/* body */
+body {
+  height: 100%;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  text-align: center;
+  /* classes e IDs de text */
+  /* IDs de link */
+  /* class de div */
+  /* class de ul */ }
+  body nav {
+    position: relative;
+    display: block;
+    overflow: auto;
+    width: 100%;
+    z-index: 30;
+    background-color: #FFFFFF;
+    border-bottom: 7px solid #F29100;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 0 8px 0 rgba(0, 0, 0, 0.19); }
+    body nav a {
+      display: block;
+      color: #002F63;
+      padding: 8px;
+      text-decoration: none; }
+      body nav a:hover {
+        color: #F29100; }
+    body nav ul {
+      padding: 0;
+      margin: 0 auto 0 auto; }
+    body nav li {
+      display: inline-block;
+      padding-right: 1px;
+      padding-bottom: 1px; }
+  body section {
+    float: left;
+    overflow: auto;
+    margin: 0;
+    padding-top: 15px; }
+  body article {
+    overflow: auto;
+    padding: 0 0 25px 0;
+    float: left; }
+  body footer {
+    background-color: #002F63;
+    padding: 1% 5px 5px 5px;
+    color: white;
+    clear: both;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 0 8px 0 rgba(0, 0, 0, 0.19); }
+    body footer ul {
+      display: inline-block;
+      margin: 0 0 0 0;
+      vertical-align: middle; }
+    body footer li {
+      float: left;
+      padding-right: 7px; }
+    body footer p {
+      display: inline;
+      margin: 0 0 5px 0; }
+  body br {
+    display: block;
+    margin: 5px 0; }
+  body #copyright {
+    font-size: 10px; }
+  body .footer_link_text {
+    color: #002F63; }
+    body .footer_link_text:hover {
+      color: white; }
+  body .footer_link_github_text {
+    color: white; }
+    body .footer_link_github_text:hover {
+      color: black; }
+  body #link_github {
+    color: white; }
+    body #link_github:hover {
+      color: #CCCCCC; }
+  body #link_linkedin {
+    color: white; }
+    body #link_linkedin:hover {
+      color: #0077B5; }
+  body #link_mail {
+    color: white; }
+    body #link_mail:hover {
+      color: #F29100; }
+  body .center_box {
+    margin: 0 5% 0 5%;
+    padding: 0; }
+  body .menu, body nav ul, body footer ul {
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden; }
+
+/*# sourceMappingURL=index.css.map */

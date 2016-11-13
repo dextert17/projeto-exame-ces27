@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+	<head>
+
+		<base href="/">
+
+		<title>
+			DMDB - Dex Movie Database
+		</title>
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="Mattheus Jucá">
+		<meta name="description" content="Projeto Exame da Disciplina de CES-27 - Programação Distribuída.  Aplicação em Angular2 para exibição de Filmes e detalhes de Filmes">
+
+		<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css" />
+
+		<link rel="stylesheet" type="text/css" href="/styles/index.css" />
+		<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
+
+		<!-- Scripts do Angular2 -->
+		<!-- Polyfill(s) for older browsers -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <!-- 2. Configure SystemJS -->
+    <script src="systemjs.config.js"></script>
+    <script>
+      System.import('app').catch(function(err){ console.error(err); });
+    </script>
+
+  </head>
+
+	<body>
+
+		<nav>
+			<div class="center_box">
+				<h1>
+					<img src="/images/Brasao_ITA_cmyk.gif" alt="Instituo Tecnológico de Aeronáutica" style="width:200px;height:76px;"></img>
+					<br />
+					DMDB - Dex Movie DataBase
+				</h1>
+				<ul>
+					<li><a href="http://www.ita.br">ITA</a></li>
+					<li><a href="https://github.com/dextert17/projeto-exame-ces27">GitHub</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<section>
+			<my-app>Loading...</my-app>
+		</section>
+		
+		<article>
+			<heroes-app>Loading...</heroes-app>
+		</article>
+
+		<footer>
+			<div class="center_box">
+				<ul>
+					<li><a href="https://github.com/dextert17/" target="_blank">
+						<span class="fa-stack fa-lg" id="link_github">
+							<i class="fa fa-github fa-stack-2x fa-inverse footer_link_github_text"></i>
+						</span>
+					</a></li>
+					<li><a href="https://linkedin.com/in/mattheus-jucá-a84152112" target="_blank">
+						<span class="fa-stack fa-lg" id="link_linkedin">
+							<i class="fa fa-circle fa-stack-2x"></i>
+							<i class="fa fa-linkedin fa-stack-1x fa-inverse footer_link_text"></i>
+						</span>
+					</a></li>
+					<li><a href="mailto:mattheusjuca@gmail.com" target="_blank">
+						<span class="fa-stack fa-lg" id="link_mail">
+							<i class="fa fa-circle fa-stack-2x"></i>
+							<i class="fa fa-envelope fa-stack-1x fa-inverse footer_link_text"></i>
+						</span>
+					</a></li>
+				</ul>
+				<br/>
+				<p id="copyright"> Copyright © Mattheus M. Jucá </p>
+			</div>
+		</footer>
+	</body>
+</html>
