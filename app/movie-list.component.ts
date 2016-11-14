@@ -23,10 +23,13 @@ export class MovieListComponent implements OnInit {
     this.movieService.getMovies().then(movies => this.movies = movies);
   }
 
-  add(title: string): void {
+  add(title: string, rating: number, synopsis: string): void {
     title = title.trim();
+    synopsis = synopsis.trim();
     if (!title) { return; }
-    this.movieService.create(title)
+    if (!rating ) { return; }
+    if (!synopsis) { return; }
+    this.movieService.create(title, rating, synopsis)
       .then(movie => {
         this.movies.push(movie);
         this.selectedMovie = null;

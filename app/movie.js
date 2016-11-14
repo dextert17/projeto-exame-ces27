@@ -1,8 +1,9 @@
 "use strict";
 var Movie = (function () {
-    function Movie(id, title) {
+    function Movie(id, title, rating) {
         this.id = id;
         this.title = title;
+        this.rating = rating;
     }
     return Movie;
 }());

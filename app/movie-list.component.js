@@ -20,13 +20,20 @@ var MovieListComponent = (function () {
         var _this = this;
         this.movieService.getMovies().then(function (movies) { return _this.movies = movies; });
     };
-    MovieListComponent.prototype.add = function (title) {
+    MovieListComponent.prototype.add = function (title, rating, synopsis) {
         var _this = this;
         title = title.trim();
+        synopsis = synopsis.trim();
         if (!title) {
             return;
         }
-        this.movieService.create(title)
+        if (!rating) {
+            return;
+        }
+        if (!synopsis) {
+            return;
+        }
+        this.movieService.create(title, rating, synopsis)
             .then(function (movie) {
             _this.movies.push(movie);
             _this.selectedMovie = null;

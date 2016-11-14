@@ -33,9 +33,9 @@ export class MovieService {
     	.catch(this.handleError);
 	}
 
-	create(title: string): Promise<Movie> {
+	create(title: string, rating: number, synopsis: string): Promise<Movie> {
   	return this.http
-    	.post(this.moviesUrl, JSON.stringify({title: title}), {headers: this.headers})
+    	.post(this.moviesUrl, JSON.stringify({title: title, rating: rating, synopsis: synopsis}), {headers: this.headers})
     	.toPromise()
     	.then(res => res.json().data)
     	.catch(this.handleError);

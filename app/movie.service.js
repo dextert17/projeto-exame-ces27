@@ -35,9 +35,9 @@ var MovieService = (function () {
             .then(function () { return movie; })
             .catch(this.handleError);
     };
-    MovieService.prototype.create = function (title) {
+    MovieService.prototype.create = function (title, rating, synopsis) {
         return this.http
-            .post(this.moviesUrl, JSON.stringify({ title: title }), { headers: this.headers })
+            .post(this.moviesUrl, JSON.stringify({ title: title, rating: rating, synopsis: synopsis }), { headers: this.headers })
             .toPromise()
             .then(function (res) { return res.json().data; })
             .catch(this.handleError);

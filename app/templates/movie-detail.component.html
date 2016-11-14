@@ -8,6 +8,12 @@
    	  <label>title: </label>
    	  <input [(ngModel)]="movie.title" placeholder="title"/>
     </div>
+    <div>
+      <label>rating: </label>{{movie.rating}}
+    </div>
+    <div>
+      <label>synopsis: </label>{{movie.synopsis}}
+    </div>
     <div id="buttons">
       <button (click)="goBack()">Back</button>
       <button (click)="save()">Save</button>

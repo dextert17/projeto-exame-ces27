@@ -1,11 +1,4 @@
 <h2>My Movies</h2>
-<div>
-  <input #movieTitle placeholder="New Movie Title" />
-  <button class="add" 
-  		(click)="add(movieTitle.value); movieTitle.value=''">
-    Add
-  </button>
-</div>
 <p>Movies:</p>
 <ul class="movies">
   <li *ngFor="let movie of movies"
@@ -22,4 +15,15 @@
     {{selectedMovie.title | uppercase}} is my movie
   </h2>
   <button (click)="gotoDetail()">View Details</button>
+</div>
+<p>Add a New Movie:</p>
+<div>
+  <input #movieTitle placeholder="Title" />
+  <input #movieRating type="number" placeholder="Rating" />
+  <input #movieSynopsis placeholder="Synopsis" />
+  <button class="add" 
+      (click)="add(movieTitle.value, movieRating.value, movieSynopsis.value);
+               movieTitle.value=''; movieRating.value=''; movieSynopsis.value=''">
+    Add
+  </button>
 </div>
