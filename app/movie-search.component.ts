@@ -3,44 +3,44 @@ import { Router }            from '@angular/router';
 import { Observable }        from 'rxjs/Observable';
 import { Subject }           from 'rxjs/Subject';
 
-import { HeroSearchService } from './hero-search.service';
-import { Hero } from './hero';
+import { MovieSearchService } from './movie-search.service';
+import { Movie } from './movie';
 
 @Component({
   moduleId: module.id,
-  selector: 'hero-search',
-  templateUrl: 'hero-search.component.html',
-  styleUrls: [ 'hero-search.component.css' ],
-  providers: [HeroSearchService]
+  selector: 'movie-search',
+  templateUrl: 'movie-search.component.html',
+  styleUrls: [ 'movie-search.component.css' ],
+  providers: [MovieSearchService]
 })
 
-export class HeroSearchComponent implements OnInit {
-  heroes: Observable<Hero[]>;
+export class MovieSearchComponent implements OnInit {
+  movies: Observable<Movie[]>;
   private searchTerms = new Subject<string>();
   constructor(
-    private heroSearchService: HeroSearchService,
+    private movieSearchService: MovieSearchService,
     private router: Router) {}
   // Push a search term into the observable stream.
   search(term: string): void {
     this.searchTerms.next(term);
   }
   ngOnInit(): void {
-    this.heroes = this.searchTerms
+    this.movies = this.searchTerms
       .debounceTime(300)        // wait for 300ms pause in events
       .distinctUntilChanged()   // ignore if next search term is same as previous
       .switchMap(term => term   // switch to new observable each time
         // return the http search observable
-        ? this.heroSearchService.search(term)
-        // or the observable of empty heroes if no search term
-        : Observable.of<Hero[]>([]))
+        ? this.movieSearchService.search(term)
+        // or the observable of empty movies if no search term
+        : Observable.of<Movie[]>([]))
       .catch(error => {
         // TODO: real error handling
         console.log(error);
-        return Observable.of<Hero[]>([]);
+        return Observable.of<Movie[]>([]);
       });
   }
-  gotoDetail(hero: Hero): void {
-    let link = ['/detail', hero.id];
+  gotoDetail(movie: Movie): void {
+    let link = ['/detail', movie.id];
     this.router.navigate(link);
   }
 }

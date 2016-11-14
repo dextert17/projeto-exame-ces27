@@ -11,13 +11,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
 var dashboard_component_1 = require('./dashboard.component');
-var hero_list_component_1 = require('./hero-list.component');
-var hero_detail_component_1 = require('./hero-detail.component');
+var movie_list_component_1 = require('./movie-list.component');
+var movie_detail_component_1 = require('./movie-detail.component');
 var routes = [
     { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
     { path: 'dashboard', component: dashboard_component_1.DashboardComponent },
-    { path: 'detail/:id', component: hero_detail_component_1.HeroDetailComponent },
-    { path: 'heroes', component: hero_list_component_1.HeroListComponent }
+    { path: 'detail/:id', component: movie_detail_component_1.MovieDetailComponent },
+    { path: 'movies', component: movie_list_component_1.MovieListComponent }
 ];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {

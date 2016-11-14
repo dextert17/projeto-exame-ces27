@@ -11,53 +11,53 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var http_1 = require('@angular/http');
 require('rxjs/add/operator/toPromise');
-var HeroService = (function () {
-    function HeroService(http) {
+var MovieService = (function () {
+    function MovieService(http) {
         this.http = http;
-        this.heroesUrl = 'app/heroes'; // URL to web api
+        this.moviesUrl = 'app/movies'; // URL to web api
         this.headers = new http_1.Headers({ 'Content-Type': 'application/json' });
     }
-    HeroService.prototype.getHeroes = function () {
-        return this.http.get(this.heroesUrl)
+    MovieService.prototype.getMovies = function () {
+        return this.http.get(this.moviesUrl)
             .toPromise()
             .then(function (response) { return response.json().data; })
             .catch(this.handleError);
     };
-    HeroService.prototype.getHero = function (id) {
-        return this.getHeroes()
-            .then(function (heroes) { return heroes.find(function (hero) { return hero.id === id; }); });
+    MovieService.prototype.getMovie = function (id) {
+        return this.getMovies()
+            .then(function (movies) { return movies.find(function (movie) { return movie.id === id; }); });
     };
-    HeroService.prototype.update = function (hero) {
-        var url = this.heroesUrl + "/" + hero.id;
+    MovieService.prototype.update = function (movie) {
+        var url = this.moviesUrl + "/" + movie.id;
         return this.http
-            .put(url, JSON.stringify(hero), { headers: this.headers })
+            .put(url, JSON.stringify(movie), { headers: this.headers })
             .toPromise()
-            .then(function () { return hero; })
+            .then(function () { return movie; })
             .catch(this.handleError);
     };
-    HeroService.prototype.create = function (name) {
+    MovieService.prototype.create = function (title) {
         return this.http
-            .post(this.heroesUrl, JSON.stringify({ name: name }), { headers: this.headers })
+            .post(this.moviesUrl, JSON.stringify({ title: title }), { headers: this.headers })
             .toPromise()
             .then(function (res) { return res.json().data; })
             .catch(this.handleError);
     };
-    HeroService.prototype.delete = function (id) {
-        var url = this.heroesUrl + "/" + id;
+    MovieService.prototype.delete = function (id) {
+        var url = this.moviesUrl + "/" + id;
         return this.http.delete(url, { headers: this.headers })
             .toPromise()
             .then(function () { return null; })
             .catch(this.handleError);
     };
-    HeroService.prototype.handleError = function (error) {
+    MovieService.prototype.handleError = function (error) {
         console.error('An error occurred', error); // for demo purposes only
         return Promise.reject(error.message || error);
     };
-    HeroService = __decorate([
+    MovieService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [http_1.Http])
-    ], HeroService);
-    return HeroService;
+    ], MovieService);
+    return MovieService;
 }());
-exports.HeroService = HeroService;
-//# sourceMappingURL=hero.service.js.map
+exports.MovieService = MovieService;
+//# sourceMappingURL=movie.service.js.map

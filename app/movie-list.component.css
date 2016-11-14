@@ -2,14 +2,14 @@
   background-color: #CFD8DC !important;
   color: white;
 }
-.heroes {
+.movies {
   margin: 0 auto 2em auto;
   list-style-type: none;
   padding: 0;
   width: 15em;
   text-align: left;
 }
-.heroes li {
+.movies li {
   cursor: pointer;
   position: relative;
   left: 0;
@@ -19,20 +19,20 @@
   height: 2.3em;
   border-radius: 4px;
 }
-.heroes li.selected:hover {
+.movies li.selected:hover {
   background-color: #BBD8DC !important;
   color: white;
 }
-.heroes li:hover {
+.movies li:hover {
   color: #607D8B;
   background-color: #DDD;
   left: .1em;
 }
-.heroes .text {
+.movies .text {
   position: relative;
   top: -3px;
 }
-.heroes .badge {
+.movies .badge {
   display: inline-block;
   font-size: small;
   color: white;
@@ -51,7 +51,7 @@ button.delete {
   margin-top: 2px;
   margin-right: .8em;
   background-color: gray !important;
-  color:white;
+  color: white;
   box-shadow: none;
   padding: 2px 5px;
 }

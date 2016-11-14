@@ -12,24 +12,24 @@ var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
 var Observable_1 = require('rxjs/Observable');
 var Subject_1 = require('rxjs/Subject');
-var hero_search_service_1 = require('./hero-search.service');
-var HeroSearchComponent = (function () {
-    function HeroSearchComponent(heroSearchService, router) {
-        this.heroSearchService = heroSearchService;
+var movie_search_service_1 = require('./movie-search.service');
+var MovieSearchComponent = (function () {
+    function MovieSearchComponent(movieSearchService, router) {
+        this.movieSearchService = movieSearchService;
         this.router = router;
         this.searchTerms = new Subject_1.Subject();
     }
     // Push a search term into the observable stream.
-    HeroSearchComponent.prototype.search = function (term) {
+    MovieSearchComponent.prototype.search = function (term) {
         this.searchTerms.next(term);
     };
-    HeroSearchComponent.prototype.ngOnInit = function () {
+    MovieSearchComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.heroes = this.searchTerms
+        this.movies = this.searchTerms
             .debounceTime(300) // wait for 300ms pause in events
             .distinctUntilChanged() // ignore if next search term is same as previous
             .switchMap(function (term) { return term // switch to new observable each time
-            ? _this.heroSearchService.search(term)
+            ? _this.movieSearchService.search(term)
             : Observable_1.Observable.of([]); })
             .catch(function (error) {
             // TODO: real error handling
@@ -37,21 +37,21 @@ var HeroSearchComponent = (function () {
             return Observable_1.Observable.of([]);
         });
     };
-    HeroSearchComponent.prototype.gotoDetail = function (hero) {
-        var link = ['/detail', hero.id];
+    MovieSearchComponent.prototype.gotoDetail = function (movie) {
+        var link = ['/detail', movie.id];
         this.router.navigate(link);
     };
-    HeroSearchComponent = __decorate([
+    MovieSearchComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'hero-search',
-            templateUrl: 'hero-search.component.html',
-            styleUrls: ['hero-search.component.css'],
-            providers: [hero_search_service_1.HeroSearchService]
+            selector: 'movie-search',
+            templateUrl: 'movie-search.component.html',
+            styleUrls: ['movie-search.component.css'],
+            providers: [movie_search_service_1.MovieSearchService]
         }), 
-        __metadata('design:paramtypes', [hero_search_service_1.HeroSearchService, router_1.Router])
-    ], HeroSearchComponent);
-    return HeroSearchComponent;
+        __metadata('design:paramtypes', [movie_search_service_1.MovieSearchService, router_1.Router])
+    ], MovieSearchComponent);
+    return MovieSearchComponent;
 }());
-exports.HeroSearchComponent = HeroSearchComponent;
-//# sourceMappingURL=hero-search.component.js.map
+exports.MovieSearchComponent = MovieSearchComponent;
+//# sourceMappingURL=movie-search.component.js.map

@@ -1,0 +1,13 @@
+<div id="search-component">
+  <h4>Movie Search</h4>
+  <form id="search-form">
+    <input #searchBox id="search-box" placeholder="Type a Movie Title Here" 
+  		(keyup)="search(searchBox.value)" />
+  </form>
+  <div>
+    <div *ngFor="let movie of movies | async"
+         (click)="gotoDetail(movie)" class="search-result" >
+      {{movie.title}}
+    </div>
+  </div>
+</div>

@@ -9,21 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var hero_service_1 = require('./hero.service');
-var HeroAppComponent = (function () {
-    function HeroAppComponent() {
-        this.title = 'Tour of Heroes';
+var movie_service_1 = require('./movie.service');
+var MovieAppComponent = (function () {
+    function MovieAppComponent() {
+        this.title = 'Tour of Movies';
     }
-    HeroAppComponent = __decorate([
+    MovieAppComponent = __decorate([
         core_1.Component({
-            selector: 'heroes-app',
-            template: "\n  \t<h1>{{title}}</h1>\n  \t<nav>\n  \t\t<a routerLink=\"/dashboard\" routerLinkActive=\"active\">Dashboard</a>\n   \t\t<a routerLink=\"/heroes\" routerLinkActive=\"active\">Heroes</a>\n  \t</nav>\n\t\t<router-outlet></router-outlet>\n\t",
-            styleUrls: ['app/hero-app.component.css'],
-            providers: [hero_service_1.HeroService]
+            selector: 'movies-app',
+            template: "\n  \t<h1>{{title}}</h1>\n  \t<nav>\n  \t\t<a routerLink=\"/dashboard\" routerLinkActive=\"active\">Dashboard</a>\n   \t\t<a routerLink=\"/movies\" routerLinkActive=\"active\">Movies</a>\n  \t</nav>\n\t\t<router-outlet></router-outlet>\n\t",
+            styleUrls: ['app/movie-app.component.css'],
+            providers: [movie_service_1.MovieService]
         }), 
         __metadata('design:paramtypes', [])
-    ], HeroAppComponent);
-    return HeroAppComponent;
+    ], MovieAppComponent);
+    return MovieAppComponent;
 }());
-exports.HeroAppComponent = HeroAppComponent;
-//# sourceMappingURL=hero-app.component.js.map
+exports.MovieAppComponent = MovieAppComponent;
+//# sourceMappingURL=movie-app.component.js.map

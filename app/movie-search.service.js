@@ -10,20 +10,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var http_1 = require('@angular/http');
-var HeroSearchService = (function () {
-    function HeroSearchService(http) {
+var MovieSearchService = (function () {
+    function MovieSearchService(http) {
         this.http = http;
     }
-    HeroSearchService.prototype.search = function (term) {
+    MovieSearchService.prototype.search = function (term) {
         return this.http
-            .get("app/heroes/?name=" + term)
+            .get("app/movies/?title=" + term)
             .map(function (r) { return r.json().data; });
     };
-    HeroSearchService = __decorate([
+    MovieSearchService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [http_1.Http])
-    ], HeroSearchService);
-    return HeroSearchService;
+    ], MovieSearchService);
+    return MovieSearchService;
 }());
-exports.HeroSearchService = HeroSearchService;
-//# sourceMappingURL=hero-search.service.js.map
+exports.MovieSearchService = MovieSearchService;
+//# sourceMappingURL=movie-search.service.js.map

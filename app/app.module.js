@@ -18,12 +18,12 @@ var app_routing_module_1 = require('./app-routing.module');
 var angular_in_memory_web_api_1 = require('angular-in-memory-web-api');
 var in_memory_data_service_1 = require('./in-memory-data.service');
 var app_component_1 = require('./app.component');
-var hero_app_component_1 = require('./hero-app.component');
+var movie_app_component_1 = require('./movie-app.component');
 var dashboard_component_1 = require('./dashboard.component');
-var hero_list_component_1 = require('./hero-list.component');
-var hero_detail_component_1 = require('./hero-detail.component');
-var hero_search_component_1 = require('./hero-search.component');
-var hero_service_1 = require('./hero.service');
+var movie_list_component_1 = require('./movie-list.component');
+var movie_detail_component_1 = require('./movie-detail.component');
+var movie_search_component_1 = require('./movie-search.component');
+var movie_service_1 = require('./movie.service');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -38,17 +38,17 @@ var AppModule = (function () {
             ],
             declarations: [
                 app_component_1.AppComponent,
-                hero_app_component_1.HeroAppComponent,
+                movie_app_component_1.MovieAppComponent,
                 dashboard_component_1.DashboardComponent,
-                hero_list_component_1.HeroListComponent,
-                hero_detail_component_1.HeroDetailComponent,
-                hero_search_component_1.HeroSearchComponent
+                movie_list_component_1.MovieListComponent,
+                movie_detail_component_1.MovieDetailComponent,
+                movie_search_component_1.MovieSearchComponent
             ],
             bootstrap: [
                 app_component_1.AppComponent,
-                hero_app_component_1.HeroAppComponent
+                movie_app_component_1.MovieAppComponent
             ],
-            providers: [hero_service_1.HeroService]
+            providers: [movie_service_1.MovieService]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);

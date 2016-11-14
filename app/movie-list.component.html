@@ -1,0 +1,25 @@
+<h2>My Movies</h2>
+<div>
+  <input #movieTitle placeholder="New Movie Title" />
+  <button class="add" 
+  		(click)="add(movieTitle.value); movieTitle.value=''">
+    Add
+  </button>
+</div>
+<p>Movies:</p>
+<ul class="movies">
+  <li *ngFor="let movie of movies"
+    [class.selected]="movie === selectedMovie"
+    (click)="onSelect(movie)">
+      <span class="badge">{{movie.id}}</span> {{movie.title}}
+      <button class="delete"
+			  (click)="delete(movie); $event.stopPropagation()">x
+			</button>
+  </li>
+</ul>
+<div *ngIf="selectedMovie">
+  <h2>
+    {{selectedMovie.title | uppercase}} is my movie
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>

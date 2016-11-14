@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Hero } from './hero';
-import { HeroService } from './hero.service';
+import { Movie } from './movie';
+import { MovieService } from './movie.service';
 
 @Component({
   moduleId: module.id,
@@ -12,12 +12,12 @@ import { HeroService } from './hero.service';
 
 export class DashboardComponent implements OnInit {
 
-  heroes: Hero[] = [];
+  movies: Movie[] = [];
 
-  constructor(private heroService: HeroService) { }
+  constructor(private movieService: MovieService) { }
 
   ngOnInit(): void {
-    this.heroService.getHeroes()
-      .then(heroes => this.heroes = heroes.slice(1, 5));
+    this.movieService.getMovies()
+      .then(movies => this.movies = movies.slice(1, 5));
   }
 }
