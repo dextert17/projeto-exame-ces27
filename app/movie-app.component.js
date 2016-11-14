@@ -18,7 +18,7 @@ var MovieAppComponent = (function () {
         core_1.Component({
             selector: 'movies-app',
             template: "\n  \t<h1>{{title}}</h1>\n  \t<nav>\n  \t\t<a routerLink=\"/dashboard\" routerLinkActive=\"active\">Dashboard</a>\n   \t\t<a routerLink=\"/movies\" routerLinkActive=\"active\">Movies</a>\n  \t</nav>\n\t\t<router-outlet></router-outlet>\n\t",
-            styleUrls: ['app/movie-app.component.css'],
+            styleUrls: ['app/styles/movie-app.component.css'],
             providers: [movie_service_1.MovieService]
         }), 
         __metadata('design:paramtypes', [])

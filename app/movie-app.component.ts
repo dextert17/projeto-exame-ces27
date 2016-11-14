@@ -12,7 +12,7 @@ import { MovieService } from './movie.service';
   	</nav>
 		<router-outlet></router-outlet>
 	`,
-	styleUrls: [ 'app/movie-app.component.css' ],
+	styleUrls: [ 'app/styles/movie-app.component.css' ],
   providers: [MovieService]
 })
 

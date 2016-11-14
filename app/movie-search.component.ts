@@ -9,8 +9,8 @@ import { Movie } from './movie';
 @Component({
   moduleId: module.id,
   selector: 'movie-search',
-  templateUrl: 'movie-search.component.html',
-  styleUrls: [ 'movie-search.component.css' ],
+  templateUrl: './templates/movie-search.component.html',
+  styleUrls: [ './styles/movie-search.component.css' ],
   providers: [MovieSearchService]
 })
 

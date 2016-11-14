@@ -24,8 +24,8 @@ var DashboardComponent = (function () {
         core_1.Component({
             moduleId: module.id,
             selector: 'my-dashboard',
-            templateUrl: 'dashboard.component.html',
-            styleUrls: ['dashboard.component.css']
+            templateUrl: './templates/dashboard.component.html',
+            styleUrls: ['./styles/dashboard.component.css']
         }), 
         __metadata('design:paramtypes', [movie_service_1.MovieService])
     ], DashboardComponent);

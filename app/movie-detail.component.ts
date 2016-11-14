@@ -9,8 +9,8 @@ import { MovieService } from './movie.service';
 @Component({
   moduleId: module.id,
   selector: 'my-movie-detail',
-  templateUrl: 'movie-detail.component.html',
-  styleUrls: [ 'movie-detail.component.css' ]
+  templateUrl: './templates/movie-detail.component.html',
+  styleUrls: [ './styles/movie-detail.component.css' ]
 })
 
 export class MovieDetailComponent implements OnInit {

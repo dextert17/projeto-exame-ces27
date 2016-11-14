@@ -44,8 +44,8 @@ var MovieDetailComponent = (function () {
         core_1.Component({
             moduleId: module.id,
             selector: 'my-movie-detail',
-            templateUrl: 'movie-detail.component.html',
-            styleUrls: ['movie-detail.component.css']
+            templateUrl: './templates/movie-detail.component.html',
+            styleUrls: ['./styles/movie-detail.component.css']
         }), 
         __metadata('design:paramtypes', [movie_service_1.MovieService, router_1.ActivatedRoute, common_1.Location])
     ], MovieDetailComponent);

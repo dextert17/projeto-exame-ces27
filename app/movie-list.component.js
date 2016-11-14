@@ -56,8 +56,8 @@ var MovieListComponent = (function () {
         core_1.Component({
             moduleId: module.id,
             selector: 'my-movies',
-            templateUrl: 'movie-list.component.html',
-            styleUrls: ['movie-list.component.css']
+            templateUrl: './templates/movie-list.component.html',
+            styleUrls: ['./styles/movie-list.component.css']
         }), 
         __metadata('design:paramtypes', [router_1.Router, movie_service_1.MovieService])
     ], MovieListComponent);
