@@ -9,10 +9,12 @@
    	  <input [(ngModel)]="movie.title" placeholder="title"/>
     </div>
     <div>
-      <label>rating: </label>{{movie.rating}}
+      <label>rating: </label>
+      <input [(ngModel)]="movie.rating" placeholder="rating"/>
     </div>
     <div>
-      <label>synopsis: </label>{{movie.synopsis}}
+      <label>synopsis: </label>
+      <input [(ngModel)]="movie.synopsis" placeholder="synopsis"/>
     </div>
     <div id="buttons">
       <button (click)="goBack()">Back</button>

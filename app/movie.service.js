@@ -50,7 +50,7 @@ var MovieService = (function () {
             .catch(this.handleError);
     };
     MovieService.prototype.handleError = function (error) {
-        console.error('An error occurred', error); // for demo purposes only
+        console.error('An error occurred', error);
         return Promise.reject(error.message || error);
     };
     MovieService = __decorate([
