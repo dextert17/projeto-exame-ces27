@@ -17,13 +17,18 @@
   <button (click)="gotoDetail()">View Details</button>
 </div>
 <p>Add a New Movie:</p>
-<div>
+<div id="addtion">
   <input #movieTitle placeholder="Title" />
-  <input #movieRating type="number" placeholder="Rating" />
-  <input #movieSynopsis placeholder="Synopsis" />
-  <button class="add" 
-      (click)="add(movieTitle.value, movieRating.value, movieSynopsis.value);
-               movieTitle.value=''; movieRating.value=''; movieSynopsis.value=''">
-    Add
-  </button>
+  <br />
+  <input #movieRating type="number" min="1" max="5" placeholder="Rating" />
+  <br />
+  <textarea #movieSynopsis rows="10" placeholder="Synopsis"></textarea>
+  <br />
+  <div id="button-div">
+    <button class="add" 
+         (click)="add(movieTitle.value, movieRating.value, movieSynopsis.value);
+                  movieTitle.value=''; movieRating.value=''; movieSynopsis.value=''">
+      Add
+    </button>
+  </div>
 </div>

@@ -6,7 +6,7 @@
   margin: 0 auto 2em auto;
   list-style-type: none;
   padding: 0;
-  width: 15em;
+  width: 500px;
   text-align: left;
 }
 .movies li {
@@ -59,10 +59,24 @@ button.add {
   padding: 3px 10px;
   vertical-align: middle;
 }
-input {
+input, textarea {
   padding: 6px 10px;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  width: 500px;
+  resize: vertical;
+}
+#addtion {
+  vertical-align: top;
+  display: inline-block;
+  padding: 0 10px 10px 10px;
+  margin: 0 25px 25px 25px;
+  max-width: 100%;
+  text-align: left;
+  line-height: 1px;
+}
+#button-div {
+  text-align: center;
 }

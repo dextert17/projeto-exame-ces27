@@ -12,6 +12,7 @@
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  width: 350px;
 }
 .details label {
   display: inline-block;
@@ -24,6 +25,19 @@
   margin-top: 15px;
   margin-right: 5px;
 }
+.details textarea {
+  padding: 6px 10px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 350px;
+  resize: vertical;
+}
 #buttons {
   text-align: center;
+}
+br {
+  display: block;
+  margin: 1px 0;
 }

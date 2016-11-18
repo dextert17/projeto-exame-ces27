@@ -6,15 +6,18 @@
     </div>
     <div>
    	  <label>title: </label>
+      <br />
    	  <input [(ngModel)]="movie.title" placeholder="title"/>
     </div>
     <div>
       <label>rating: </label>
-      <input [(ngModel)]="movie.rating" placeholder="rating"/>
+      <br />
+      <input [(ngModel)]="movie.rating" type="number" min="1" max="5" placeholder="rating"/>
     </div>
     <div>
       <label>synopsis: </label>
-      <input [(ngModel)]="movie.synopsis" placeholder="synopsis"/>
+      <br />
+      <textarea [(ngModel)]="movie.synopsis" rows="10" placeholder="synopsis"></textarea>
     </div>
     <div id="buttons">
       <button (click)="goBack()">Back</button>
