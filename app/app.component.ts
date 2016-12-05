@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'my-app',
-  template: '<h1>My SECOND Angular App</h1>'
+  template: '<p>Projeto Exame do aluno Mattheus Martins Jucá na Disciplina de CES-27 - Programação Distribuída ministrada pelo Prof. Celso Massaki Hirata no Instituto Tecnológico de Aeronáutica.</p>'
 })
 
 export class AppComponent { }
