@@ -28,10 +28,12 @@ Os comandos a seguir requerem uma instalação das ferramentas Git, Node e npm. 
 $ git --version
 ```
 > git version 2.9.2.windows.1
+
 ```shell
 $ node --version
 ```
 > v6.9.1
+
 ```shell
 $ npm --version
 ```
